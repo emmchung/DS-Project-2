@@ -1,3 +1,4 @@
+
 # Cleans and organizes the CDC data for Virginia by validating observations, removing duplicates, and creating chronological variables.
 
 import pandas as pd
@@ -20,7 +21,7 @@ if not df["region"].astype(str).str.strip().eq("Virginia").all():
     raise ValueError("Dataset contains observations outside Virginia.")
 
 # Convert columns to numeric
-numeric_cols = ["year", "week", "total_specimens","total_a", "total_b","percent_positive", "percent_a", "percent_b"]
+numeric_cols = ["year", "week", "total_specimens", "total_a", "total_b", "percent_positive", "percent_a", "percent_b"]
 
 for col in numeric_cols:
     df[col] = pd.to_numeric(df[col], errors="coerce")
@@ -97,7 +98,11 @@ if not weekly_difference.eq(pd.Timedelta(days=7)).all():
     raise ValueError("Missing weeks detected in the dataset.")
 
 # Create unique chronological week identifier
-df["year_week"] = (df["year"].astype(int).astype(str) + "-W" + df["week"].astype(int).astype(str).str.zfill(2))
+df["year_week"] = (
+    df["year"].astype(int).astype(str)
+    + "-W"
+    + df["week"].astype(int).astype(str).str.zfill(2)
+)
 
 # Continuous week index
 df["week_index"] = np.arange(1, len(df) + 1)
@@ -110,6 +115,4 @@ df.to_csv(Filepath / "VirginiaFlu_cleaned.csv", index=False)
 
 # Verify that it ran
 print("Data cleaning completed successfully!")
-
 print("Files saved to:", Filepath)
-
