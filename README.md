@@ -8,11 +8,12 @@
 
 ## Map of Documentation
 * DS Project Repository
-* README.md
-* Data:
-* Scripts:
-* License
-* MODEL_OUTPUT:
+  * README.md
+  * Data:
+  * Scripts:
+  * License
+  * MODEL_OUTPUT:
+  * REFERENCES
 
 ## Instruction for Reproducing results
 ### Software and Environment
