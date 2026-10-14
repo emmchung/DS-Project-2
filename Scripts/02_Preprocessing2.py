@@ -7,7 +7,7 @@ from pathlib import Path
 Filepath = Path(r"C:\Users\bryso\PycharmProjects\PythonProject\Stat 2120\Raw Data")
 
 Input = Filepath / "VirginiaFlu_cleaned.csv"
-Output = Filepath / "VirginiaFlu_cleaned_final.csv"
+Output = Filepath / "VirginiaFlu.csv"
 
 # Load cleaned dataset
 df = pd.read_csv(Input)
