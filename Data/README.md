@@ -8,6 +8,63 @@ The dataset is publicly available through the Centers for Disease Control and Pr
 ## Ethical Statement 
 The CDC FluView dataset contains publicly available, aggregated influenza surveillance data without personally identifiable information. However, differences in laboratory participation, testing practices, and specimen selection may introduce biases across seasons. We will acknowledge these limitations and avoid interpreting changes in reported influenza positivity rates as direct measures of changes in influenza prevalence.
 ## Data Dictionary
+Variable
+Data Type
+Description
+Considerations
+year
+Integer
+Calendar year of observation
+Represent CDC epidemiological weeks rather than standard calendar dates. Influenza seasons span two calendar years. 
+week
+Integer
+Epidemiological week number.
+A chronological identifier is necessary to distinguish different weeks from different seasons. 
+total_specimens
+Integer
+Total influenza specimens tested
+Reflects specimens submitted and tested by participating laboratories, not all influenza infections in Virginia. Testing volume varies over time. 
+total_a
+Integer
+Number of specimens positive for influenza A.
+Counts influenced by testing volume and practices. 
+total_b
+Integer
+Number of specimens positive for influenza B.
+Counts influenced by testing volume and practices. 
+percent_positive
+Float
+Percentage of specimens positive for influenza A or B
+Rates may be affected by differences in testing practices and specimen selection.
+percent_a
+Float
+Percentage of specimens positive for influenza A.
+Rates may be affected by differences in testing practices and specimen selection.
+percent_b
+Float
+Percentage of specimens positive for influenza B.
+Rates may be affected by differences in testing practices and specimen selection.
+season
+string
+Influenza season (e.g. 2021-2022)
+Derived from year and week. Assumes influenza seasons begin at week 40. 
+week_start
+String (date format)
+Starting date of each epidemiological week (e.g. 10/3/2021)
+Accuracy depends on correctly converting CDC week numbering to calendar dates. 
+year_week
+string
+Chronological year-week identifier (e.g. 2022-W01)
+Must follow consistent formatting.
+week_index
+Integer 
+Sequential index of weeks across the entire dataset
+Assumes observations are correctly ordered. Missing weeks could impact interpretation. 
+season_week
+Integer 
+Sequential week number within each influenza season. 
+Assumes consistent season boundaries, accounts for potential 53-week years. 
+
 ## Exploratory Plots
 <img width="708" height="291" alt="Screenshot 2026-10-14 at 2 13 31 PM" src="https://github.com/user-attachments/assets/7503dc53-e4f1-4e88-b67b-02d2d2f5f295" />
 <img width="690" height="279" alt="Screenshot 2026-10-14 at 2 13 12 PM" src="https://github.com/user-attachments/assets/e4976c54-33e6-4a7d-8c66-70f4087d7187" />
