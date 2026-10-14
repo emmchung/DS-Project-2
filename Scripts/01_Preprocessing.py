@@ -1,14 +1,16 @@
-
+### THINGS IN THIS FILE NEED TO BE DELETED PERTAINING TO "FILEPATH" 
 # Cleans and organizes the CDC data for Virginia by validating observations, removing duplicates, and creating chronological variables.
 
 import pandas as pd
 import numpy as np
 from pathlib import Path
 
-# File locations
-Filepath = Path(r"C:\Users\bryso\PycharmProjects\PythonProject\Stat 2120\Raw Data")
+# File locations - DELETE this
+#Filepath = Path(r"C:\Users\bryso\PycharmProjects\PythonProject\Stat 2120\Raw Data")
+#Input = Filepath / "ICL_NREVSS_Clinical_Labs.csv"
 
-Input = Filepath / "ICL_NREVSS_Clinical_Labs.csv"
+# File location - GENERAL
+Input = "Data/ICL_NREVSS_Clinical_Labs.csv"
 
 # Load data (CDC file has an explanatory first line)
 df = pd.read_csv(Input, skiprows=1)
@@ -110,9 +112,13 @@ df["week_index"] = np.arange(1, len(df) + 1)
 # Week within each influenza season
 df["season_week"] = df.groupby("season").cumcount() + 1
 
+DELETE THIS
 # Save cleaned dataset containing every week
-df.to_csv(Filepath / "VirginiaFlu_cleaned.csv", index=False)
-
+#df.to_csv(Filepath / "VirginiaFlu_cleaned.csv", index=False)
 # Verify that it ran
+#print("Data cleaning completed successfully!")
+#print("Files saved to:", Filepath)
+
+df.to_csv("Data/VirginiaFlu_cleaned.csv", index=False)
 print("Data cleaning completed successfully!")
-print("Files saved to:", Filepath)
+print("File saved to: Data/VirginiaFlu_cleaned.csv")
