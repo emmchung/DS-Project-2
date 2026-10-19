@@ -1,4 +1,4 @@
-# EDITS STILL TO BE MADE HERE
+
 # Removes unnecessary columns from the cleaned Virginia CDC dataset and saves the final version.
 
 import pandas as pd
