@@ -57,8 +57,8 @@ df["season_start"] = np.where(
     df["year"] - 1
 )
 
-# Keep 2021-22 through 2025-26
-df = df[df["season_start"].between(2021, 2025)].copy()
+# Keep 2016-17 through 2025-26
+df = df[df["season_start"].between(2016, 2025)].copy()
 
 df["season"] = (
     df["season_start"].astype(str)
