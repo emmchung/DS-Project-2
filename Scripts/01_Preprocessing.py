@@ -5,9 +5,6 @@ import pandas as pd
 import numpy as np
 from pathlib import Path
 
-# File locations - DELETE this
-#Filepath = Path(r"C:\Users\bryso\PycharmProjects\PythonProject\Stat 2120\Raw Data")
-#Input = Filepath / "ICL_NREVSS_Clinical_Labs.csv"
 
 # File location - GENERAL
 Input = "Data/ICL_NREVSS_Clinical_Labs.csv"
@@ -111,13 +108,6 @@ df["week_index"] = np.arange(1, len(df) + 1)
 
 # Week within each influenza season
 df["season_week"] = df.groupby("season").cumcount() + 1
-
-DELETE THIS
-# Save cleaned dataset containing every week
-#df.to_csv(Filepath / "VirginiaFlu_cleaned.csv", index=False)
-# Verify that it ran
-#print("Data cleaning completed successfully!")
-#print("Files saved to:", Filepath)
 
 df.to_csv("Data/VirginiaFlu_cleaned.csv", index=False)
 print("Data cleaning completed successfully!")
