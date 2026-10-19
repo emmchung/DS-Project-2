@@ -1,4 +1,3 @@
-### THINGS IN THIS FILE NEED TO BE DELETED PERTAINING TO "FILEPATH" 
 # Cleans and organizes the CDC data for Virginia by validating observations, removing duplicates, and creating chronological variables.
 
 import pandas as pd
