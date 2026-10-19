@@ -2,16 +2,10 @@
 # Removes unnecessary columns from the cleaned Virginia CDC dataset and saves the final version.
 
 import pandas as pd
-#from pathlib import Path
-
-# File locations
-#Filepath = Path(r"C:\Users\bryso\PycharmProjects\PythonProject\Stat 2120\Raw Data")
+from pathlib import Path
 
 Input = "Data/VirginiaFlu_cleaned.csv"
 Output = "Data/VirginiaFlu.csv"
-
-#Input = Filepath / "VirginiaFlu_cleaned.csv"
-#Output = Filepath / "VirginiaFlu.csv"
 
 # Load cleaned dataset
 df = pd.read_csv(Input)
