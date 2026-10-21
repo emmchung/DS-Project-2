@@ -22,8 +22,6 @@ The analysis uses historical influenza data from the 2016–17 through 2023–24
 - numpy 2.4.6
 - matplotlib 3.11.2
 - statsmodels 0.15.0
-- warnings 
-- pathlib
 ### Platforms used
 Visual Studio Code (VS Code) with Python 3.13 and the VS Code integrated terminal, running on Windows 11 and macOS 26.2. 
 
@@ -41,9 +39,53 @@ Visual Studio Code (VS Code) with Python 3.13 and the VS Code integrated termina
     * 03_Model.py
   * License
   * MODEL_OUTPUT:
+     * forecast_accuracy_summary.csv
+     * influenza_forecast_comparison.png
+     * model_results_summary.txt
+     * sarima_model_comparison.csv
+     * sarima_residual_diagnostics.png
+     * seasonal_peak_comparison.png
+     * seasonal_peak_results.csv
+     * weekly_forecast_predictions.csv
   * REFERENCES
 
 ## Instruction for Reproducing results
 ### Software and Environment
-### Reproduce Final Results: 
-* Clone or download this GitHub repository....
+### Software and Environment
+- Python 3.13
+- Visual Studio Code (VS Code)
+- Required Python packages:
+  - pandas 3.0.3
+  - numpy 2.4.6
+  - matplotlib 3.11.2
+  - statsmodels 0.15.0
+ 
+Install the required packages by running:
+pip install pandas numpy matplotlib statsmodels
+
+### Reproduce Final Results
+
+The preprocessed Virginia influenza dataset required for modeling is provided in the `Data` folder. **Users do not need to download or preprocess the original CDC FluView dataset** to reproduce the final modeling results.
+
+1. **Clone or download** this GitHub repository and open the project folder in Visual Studio Code.
+
+2. **Confirm that the required dataset is available:**
+   - `Data/VirginiaFlu.csv`
+
+3. **Install the required Python packages** using the command provided in the Software and Environment section above.
+
+4. **Run the modeling script** from the repository's root directory:
+
+   ```bash
+   python train_model.py
+   ```
+
+5. **The modeling script will:**
+   - Load and validate the preprocessed Virginia influenza dataset.
+   - Split the data chronologically into **training (2016-17 through 2023-24)** and **testing (2024-25 through 2025-26)** seasons.
+   - Develop and select a **SARIMA model** based on Akaike Information Criterion (AIC).
+   - Generate weekly influenza positivity forecasts and compare them against a **seasonal-naive baseline**.
+   - Evaluate forecast accuracy using **MAE, RMSE, and seasonal peak timing and magnitude errors**.
+   - Generate forecast comparison figures, residual diagnostics, and summary results.
+
+6. **View the generated results** in the `Output` folder, including forecast predictions, performance metrics, figures, and summary files.
