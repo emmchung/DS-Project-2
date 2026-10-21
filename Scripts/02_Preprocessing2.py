@@ -1,22 +1,31 @@
 
-# Removes unnecessary columns from the cleaned Virginia CDC dataset and saves the final version.
+# Finalizes the cleaned Virginia CDC FluView dataset by removing columns
+# that are unnecessary for time-series modeling.
+# This script should be run after the first preprocessing script (clean_data.py).
+#
+# Input: Data/VirginiaFlu_cleaned.csv (output from first preprocessing script)
+# Output: Data/VirginiaFlu.csv (final dataset for SARIMA modeling)
+# Required library: pandas
+# Run from the repository root: python finalize_data.py
 
 import pandas as pd
 from pathlib import Path
 
+# Define input and output file locations
 Input = "Data/VirginiaFlu_cleaned.csv"
 Output = "Data/VirginiaFlu.csv"
 
-# Load cleaned dataset
+# Load the cleaned dataset from the first preprocessing script
 df = pd.read_csv(Input)
 
-# Remove unnecessary columns
+# Remove redundant region identifiers and the intermediate season_start variable
+# while retaining the variables needed for modeling
 columns_to_remove = ["region_type", "region", "season_start"]
 
 df = df.drop(columns=columns_to_remove)
 
-# Save updated dataset
+# Save the final preprocessed dataset for SARIMA modeling
 df.to_csv(Output, index=False)
 
-# Verify that it ran
+# Confirm successful completion
 print("Final data cleaning completed successfully!")
