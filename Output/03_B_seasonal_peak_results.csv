@@ -1,0 +1,5 @@
+model,season,actual_peak_date,predicted_peak_date,actual_peak_positivity,predicted_peak_positivity,timing_error_weeks,absolute_timing_error_weeks,peak_magnitude_error,absolute_peak_magnitude_error
+SARIMA,2024-2025,2025-02-02,2024-12-22,37.46,11.430917539336068,-6.0,6.0,-26.029082460663933,26.029082460663933
+Seasonal Naive,2024-2025,2025-02-02,2024-12-22,37.46,18.28,-6.0,6.0,-19.18,19.18
+SARIMA,2025-2026,2025-12-21,2025-12-21,30.12,11.391445323250359,0.0,0.0,-18.728554676749642,18.728554676749642
+Seasonal Naive,2025-2026,2025-12-21,2025-12-21,30.12,18.28,0.0,0.0,-11.84,11.84
