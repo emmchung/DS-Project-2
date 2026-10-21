@@ -9,7 +9,6 @@
 # Run from the repository root: python finalize_data.py
 
 import pandas as pd
-from pathlib import Path
 
 # Define input and output file locations
 Input = "Data/VirginiaFlu_cleaned.csv"
