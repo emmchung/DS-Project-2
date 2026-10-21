@@ -41,9 +41,9 @@ Visual Studio Code (VS Code) with Python 3.13 and the VS Code integrated termina
   * MODEL_OUTPUT:
      * forecast_accuracy_summary.csv: Accuracy of **positivity** prediction (MAE, RMSE)
      * influenza_forecast_comparison.png
+     * model_results_summary.txt: Summarizes model results.
      * sarima_model_comparison.csv: Model selection
      * sarima_residual_diagnostics.png
-     * model_results_summary.txt: Summarizes model results.
      * seasonal_peak_comparison.png
      * seasonal_peak_results.csv: Accuracy of **peak** prediction (# of weeks)
      * weekly_forecast_predictions.csv: actual model prediction
