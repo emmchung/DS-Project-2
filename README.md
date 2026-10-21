@@ -62,7 +62,8 @@ Visual Studio Code (VS Code) with Python 3.13 and the VS Code integrated termina
  
 Install the required packages by running:
  ```bash
-pip install pandas numpy matplotlib statsmodels   ```
+pip install pandas numpy matplotlib statsmodels
+```
 ### Reproduce Final Results
 
 The preprocessed Virginia influenza dataset required for modeling is provided in the `Data` folder. **Users do not need to download or preprocess the original CDC FluView dataset** to reproduce the final modeling results.
