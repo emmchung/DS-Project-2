@@ -30,7 +30,8 @@ Visual Studio Code (VS Code) with Python 3.13 and the VS Code integrated termina
   * README.md
   * Data: Original Data & Final Dataset used for analysis.
     * README.md
-    * ICL_NREVSS_Clinical_Labs.csv : Original data obtained from CDC FluView with filters for Virginia and Seasons 2016-17 through 2025-26. 
+    * ICL_NREVSS_Clinical_Labs.csv : Original data obtained from CDC FluView with filters for Virginia and Seasons 2016-17 through 2025-26.
+    * VirginiaFlu_cleaned.csv: initial preprocess datafile (output of 01_Preprocessing.py)
     * VirginiaFlu.csv : preprocessed datafile
 
   * Scripts:
