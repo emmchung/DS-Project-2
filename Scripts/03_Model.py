@@ -17,7 +17,7 @@
 #         evaluation summaries, and diagnostic figures)
 #
 # Required libraries: pandas, numpy, matplotlib, statsmodels
-# Run from the repository root: python train_model.py
+# Run from the repository root: python 03_Model.py
 
 import warnings
 from pathlib import Path
