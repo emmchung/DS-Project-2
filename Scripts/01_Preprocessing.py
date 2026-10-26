@@ -6,7 +6,7 @@
 # Input: Data/ICL_NREVSS_Clinical_Labs.csv (original CDC FluView data)
 # Output: Data/VirginiaFlu_cleaned.csv (cleaned dataset)
 # Required libraries: pandas, numpy
-# Run from the repository root: python clean_data.py
+# Run from the repository root: python 01_Preprocessing.py
 
 import pandas as pd
 import numpy as np
