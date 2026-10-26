@@ -78,7 +78,7 @@ The preprocessed Virginia influenza dataset required for modeling is provided in
 4. **Run the modeling script** from the repository's root directory:
 
    ```bash
-   python train_model.py
+   python 03_Model.py
    ```
 
 5. **The modeling script will:**
