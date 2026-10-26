@@ -18,6 +18,7 @@
 #
 # Required libraries: pandas, numpy, matplotlib, statsmodels
 # Run from the repository root: python 03_Model.py
+# **Expected Runtime**: ~2-5 min
 
 import warnings
 from pathlib import Path
