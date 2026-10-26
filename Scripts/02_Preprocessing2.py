@@ -6,7 +6,7 @@
 # Input: Data/VirginiaFlu_cleaned.csv (output from first preprocessing script)
 # Output: Data/VirginiaFlu.csv (final dataset for SARIMA modeling)
 # Required library: pandas
-# Run from the repository root: python finalize_data.py
+# Run from the repository root: python 02_Preprocessing2.py
 
 import pandas as pd
 
